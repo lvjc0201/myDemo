@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lvjc.dao.UserDao">
+    <select id="query" resultType="User">
+    select * from userinfo
+</select>
+    <insert id="insertUser" parameterType="User">
+        insert into userinfo (`name`,password) values (#{name},#{password})
+    </insert>
+</mapper>
